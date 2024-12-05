@@ -15,7 +15,7 @@ COPY src /app/src
 RUN mvn clean package -DskipTests
 
 # Use a smaller image to run the app (JRE)
-FROM openjdk:17-jre-slim
+FROM openjdk:17-slim
 
 # Copy the built jar file from the build image
 COPY --from=build /app/target/your-backend.jar /app/your-backend.jar
