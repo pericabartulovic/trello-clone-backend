@@ -15,7 +15,7 @@ COPY src /app/src
 RUN mvn clean package -DskipTests
 
 # Use a smaller image to run the app (JRE)
-FROM openjdk:17-jre-slim
+FROM eclipse-temurin:17-jre
 
 # Copy the built jar file from the build image
 COPY --from=build /app/target/trello-0.0.1-SNAPSHOT.jar /app/trello-0.0.1-SNAPSHOT.jar
