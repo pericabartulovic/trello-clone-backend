@@ -14,7 +14,7 @@ public class WebConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**")
-                        .allowedOrigins("http://localhost:4200")  // Allow CORS requests from the frontend
+                        .allowedOrigins("http://localhost:4200", "https://tranquil-marzipan-84b403.netlify.app/")  // Allow CORS requests from the frontend
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")  // Allowed HTTP methods
                         .allowCredentials(true);  // Allow sending credentials (cookies, HTTP authentication)
             }
