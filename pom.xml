@@ -11,7 +11,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>trello</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>trello</name>
+	<name>trello-clone</name>
 	<description>Demo trello-clone</description>
 	<url/>
 	<licenses>
