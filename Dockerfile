@@ -1,5 +1,5 @@
 # Use Maven image to build the app
-FROM maven:3.8.1-openjdk-11-slim as build
+FROM maven:3.8.1-openjdk-17-slim as build
 
 # Set the working directory in the container
 WORKDIR /app
@@ -15,7 +15,7 @@ COPY src /app/src
 RUN mvn clean package -DskipTests
 
 # Use a smaller image to run the app (JRE)
-FROM openjdk:11-jre-slim
+FROM openjdk:17-jre-slim
 
 # Copy the built jar file from the build image
 COPY --from=build /app/target/trello-0.0.1-SNAPSHOT.jar /app/trello-0.0.1-SNAPSHOT.jar
